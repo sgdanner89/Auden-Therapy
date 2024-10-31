@@ -1,0 +1,223 @@
+/* PAGES.CSS */
+
+/* -----------------
+   HOME PAGE (index.html)
+   ----------------- */
+.introduction {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 3em;
+}
+
+    .cta h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .cta p {
+        margin-bottom: 1.5em;
+    }
+
+/* -----------------
+   SPECIALTIES PAGE (specialties.html)
+   ----------------- */
+.specialties-section {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specialties {
+    column-count: 2;
+    column-gap: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .specialties li {
+        margin-bottom: 0.75em;
+        padding-left: 1.5em;
+        position: relative;
+    }
+
+        .specialties li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #00796b;
+            font-size: 1.5em;
+        }
+
+@media (max-width: 768px) {
+    .specialties {
+        column-count: 1;
+    }
+}
+
+/* -----------------
+   INTAKE PAGE (intake.html)
+   ----------------- */
+.intake-form {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjustments for checkbox group layout */
+.checkbox-group {
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0.5em;
+}
+
+/* -----------------
+   CONTACT PAGE (contact.html)
+   ----------------- */
+.contact-section {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -----------------
+   RESOURCES PAGE (resources.html)
+   ----------------- */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------
+   ENDORSEMENTS PAGE (endorsements.html)
+   ----------------- */
+.endorsements-hero {
+    text-align: center;
+    padding: 4em 1em;
+    background-color: #00796b;
+    color: #ffffff;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    animation: fade 0.5s ease-in-out;
+}
+
+    .carousel-item.active {
+        display: block;
+    }
+
+/* -----------------
+   BLOG PAGE (blog.html)
+   ----------------- */
+.blog-container {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+    .blog-post h3 {
+        margin-bottom: 0.5em;
+    }
+
+.categories {
+    margin-top: 0.5em;
+}
+
+.category-tag {
+    margin-right: 0.5em;
+}
+
+/* -----------------
+   POST PAGES (post1.html, post2.html)
+   ----------------- */
+.content-container {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .content-container p {
+        margin-bottom: 1.5em;
+        line-height: 1.8;
+    }
+
+/* -----------------
+   ABOUT PAGE (about.html)
+   ----------------- */
+.about-section {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5em;
+}

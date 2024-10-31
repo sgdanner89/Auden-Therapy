@@ -1,0 +1,182 @@
+/* STYLES.CSS */
+
+/* -----------------
+   GLOBAL BODY STYLES
+   ----------------- */
+body {
+    font-family: 'Lato', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc;
+    color: #333333;
+    line-height: 1.6;
+}
+
+/* -----------------
+   FONT IMPORTS
+   ----------------- */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Merriweather:wght@700&display=swap');
+
+/* -----------------
+   NAVIGATION STYLES
+   ----------------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #00796b;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        nav a:hover {
+            background-color: #004d40;
+            border-radius: 5px;
+        }
+
+/* -----------------
+   FOOTER STYLES
+   ----------------- */
+footer {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #00796b;
+    color: #ffffff;
+    margin-top: 3em;
+}
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+/* -----------------
+   GENERAL LINK STYLES
+   ----------------- */
+a {
+    color: #00796b;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: #004d40;
+    }
+
+/* -----------------
+   TYPOGRAPHY STYLES
+   ----------------- */
+p {
+    margin-bottom: 1.5em;
+    font-size: 1em;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* -----------------
+   UTILITY CLASSES
+   ----------------- */
+/* Spacing utilities */
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mb-1 {
+    margin-bottom: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
+.mb-2 {
+    margin-bottom: 2em;
+}
+
+.pt-1 {
+    padding-top: 1em;
+}
+
+.pb-1 {
+    padding-bottom: 1em;
+}
+
+.pt-2 {
+    padding-top: 2em;
+}
+
+.pb-2 {
+    padding-bottom: 2em;
+}
+
+/* Text alignment utilities */
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* -----------------
+   RESPONSIVE DESIGN
+   ----------------- */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: #00796b;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .text-left {
+        text-align: left;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    /* Utility classes for smaller screens */
+    .mt-1 {
+        margin-top: 0.5em;
+    }
+
+    .mb-1 {
+        margin-bottom: 0.5em;
+    }
+}

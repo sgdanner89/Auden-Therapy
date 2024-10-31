@@ -1,0 +1,343 @@
+/* COMPONENTS.CSS */
+
+/* -----------------
+   HEADING STYLES
+   ----------------- */
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #00796b; /* Consistent green color for headings */
+    margin-bottom: 1em;
+}
+
+h1 {
+    font-size: 2.5em;
+    text-align: center; /* Centered by default */
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center; /* Can be overridden for specific pages */
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-top: 0.5em; /* For closer proximity to content */
+}
+
+/* -----------------
+   BUTTON STYLES
+   ----------------- */
+.button {
+    background-color: #00796b;
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+    .button:hover {
+        background-color: #004d40;
+        transform: translateY(-2px);
+    }
+
+/* Centering the button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5em; /* Adjust as needed */
+}
+
+/* Full-width button for forms */
+.button-full {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 1.5em auto;
+}
+
+/* -----------------
+   CARD STYLES
+   ----------------- */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 0.5em;
+    }
+
+    .card p {
+        font-size: 1em;
+        margin-bottom: 1em;
+        color: #555555;
+    }
+
+/* -----------------
+   CATEGORY TAG STYLES
+   ----------------- */
+.category-tag {
+    display: inline-block;
+    background-color: #e0f7fa; /* Light blue background */
+    color: #00796b; /* Green text color */
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* -----------------
+   ENDORSEMENT CARD STYLES
+   ----------------- */
+.endorsement-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+    .endorsement-card strong {
+        display: block;
+        font-family: 'Merriweather', serif;
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 0.5em;
+    }
+
+    .endorsement-card p {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        color: #555555;
+    }
+
+    .endorsement-card blockquote {
+        font-size: 1em;
+        font-style: italic;
+        color: #333333;
+        margin: 1em 0;
+        line-height: 1.6;
+    }
+
+/* Carousel container adjustments */
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-item {
+    display: none;
+    animation: fade 0.5s ease-in-out;
+}
+
+    .carousel-item.active {
+        display: block;
+    }
+
+/* Navigation buttons */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+/* Fade animation for carousel */
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* -----------------
+   FORM STYLES
+   ----------------- */
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 1.5em;
+}
+
+/* Checkbox and radio group styling */
+.checkbox-group,
+.radio-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 0.5em;
+}
+
+/* -----------------
+   RESOURCE CARD STYLES
+   ----------------- */
+.resource-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 3em auto;
+    padding: 2em;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+}
+
+.resource-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers text and buttons horizontally */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center; /* Centers text */
+    transition: transform 0.3s, box-shadow 0.3s;
+    flex: 1;
+    max-width: 300px;
+}
+
+    .resource-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1em;
+    }
+
+    .resource-card h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 0.5em;
+    }
+
+    .resource-card p {
+        font-size: 1em;
+        margin-bottom: 1.5em;
+        color: #555555;
+    }
+
+    .resource-card .button {
+        background-color: #00796b;
+        color: #ffffff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 25px;
+        font-size: 1em;
+        transition: background-color 0.3s, transform 0.2s;
+        margin-top: auto; /* Ensures button stays at the bottom */
+    }
+
+        .resource-card .button:hover {
+            background-color: #004d40;
+            transform: translateY(-2px);
+        }
+
+/* -----------------
+   SUCCESS NOTIFICATION STYLES
+   ----------------- */
+.success-notification {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s, fadeOut 0.5s 3s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* -----------------
+   RESPONSIVE DESIGN
+   ----------------- */
+@media (max-width: 768px) {
+    .button {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 1em;
+    }
+
+    h1, h2, h3 {
+        text-align: center; /* Ensure centered text on smaller screens */
+    }
+}
