@@ -5,23 +5,23 @@
    ----------------- */
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
-    color: #00796b; /* Consistent green color for headings */
+    color: #00796b;
     margin-bottom: 1em;
 }
 
 h1 {
     font-size: 2.5em;
-    text-align: center; /* Centered by default */
+    text-align: center;
 }
 
 h2 {
     font-size: 2em;
-    text-align: center; /* Can be overridden for specific pages */
+    text-align: center;
 }
 
 h3 {
     font-size: 1.8em;
-    margin-top: 0.5em; /* For closer proximity to content */
+    margin-top: 0.5em;
 }
 
 /* -----------------
@@ -45,66 +45,19 @@ h3 {
         transform: translateY(-2px);
     }
 
-/* Centering the button */
-.button-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.5em; /* Adjust as needed */
-}
-
-/* Full-width button for forms */
-.button-full {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 1.5em auto;
-}
-
-/* -----------------
-   CARD STYLES
-   ----------------- */
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5em;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    .card h3 {
-        font-family: 'Merriweather', serif;
-        font-size: 1.5em;
-        color: #00796b;
-        margin-bottom: 0.5em;
-    }
-
-    .card p {
-        font-size: 1em;
-        margin-bottom: 1em;
-        color: #555555;
-    }
-
 /* -----------------
    CATEGORY TAG STYLES
    ----------------- */
 .category-tag {
     display: inline-block;
-    background-color: #e0f7fa; /* Light blue background */
-    color: #00796b; /* Green text color */
+    background-color: #e0f7fa;
+    color: #00796b;
     padding: 5px 10px;
     border-radius: 15px;
     font-size: 0.9em;
     font-weight: bold;
     margin-right: 0.5em;
     margin-bottom: 0.5em;
-    transition: background-color 0.3s, color 0.3s;
 }
 
 /* -----------------
@@ -129,21 +82,7 @@ h3 {
         margin-bottom: 0.5em;
     }
 
-    .endorsement-card p {
-        font-size: 1em;
-        margin-bottom: 1.5em;
-        color: #555555;
-    }
-
-    .endorsement-card blockquote {
-        font-size: 1em;
-        font-style: italic;
-        color: #333333;
-        margin: 1em 0;
-        line-height: 1.6;
-    }
-
-/* Carousel container adjustments */
+/* Carousel container */
 .carousel-container {
     overflow: hidden;
 }
@@ -157,29 +96,6 @@ h3 {
         display: block;
     }
 
-/* Navigation buttons */
-.carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #333;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1000;
-}
-
-.carousel-prev {
-    left: 10px;
-}
-
-.carousel-next {
-    right: 10px;
-}
-
-/* Fade animation for carousel */
 @keyframes fade {
     from {
         opacity: 0.4;
@@ -188,6 +104,33 @@ h3 {
     to {
         opacity: 1;
     }
+}
+
+/* Navigation buttons */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+    .carousel-prev:hover, .carousel-next:hover {
+        background-color: #555;
+    }
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
 }
 
 /* -----------------
@@ -205,19 +148,11 @@ select {
     font-size: 1em;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5em;
-    font-weight: bold;
-}
-
 .form-group {
     margin-bottom: 1.5em;
 }
 
-/* Checkbox and radio group styling */
-.checkbox-group,
-.radio-group {
+.checkbox-group {
     display: flex;
     gap: 15px;
     flex-wrap: wrap;
@@ -235,18 +170,18 @@ label {
     max-width: 1000px;
     margin: 3em auto;
     padding: 2em;
-    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .resource-card {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers text and buttons horizontally */
+    align-items: center;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2em;
-    text-align: center; /* Centers text */
+    text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     flex: 1;
     max-width: 300px;
@@ -265,28 +200,6 @@ label {
         margin-bottom: 0.5em;
     }
 
-    .resource-card p {
-        font-size: 1em;
-        margin-bottom: 1.5em;
-        color: #555555;
-    }
-
-    .resource-card .button {
-        background-color: #00796b;
-        color: #ffffff;
-        padding: 10px 20px;
-        text-decoration: none;
-        border-radius: 25px;
-        font-size: 1em;
-        transition: background-color 0.3s, transform 0.2s;
-        margin-top: auto; /* Ensures button stays at the bottom */
-    }
-
-        .resource-card .button:hover {
-            background-color: #004d40;
-            transform: translateY(-2px);
-        }
-
 /* -----------------
    SUCCESS NOTIFICATION STYLES
    ----------------- */
@@ -304,26 +217,6 @@ label {
     animation: fadeIn 0.5s, fadeOut 0.5s 3s;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
-}
-
 /* -----------------
    RESPONSIVE DESIGN
    ----------------- */
@@ -333,11 +226,7 @@ label {
         max-width: 100%;
     }
 
-    .card {
-        padding: 1em;
-    }
-
     h1, h2, h3 {
-        text-align: center; /* Ensure centered text on smaller screens */
+        text-align: center;
     }
 }
