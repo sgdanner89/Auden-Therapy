@@ -9,7 +9,7 @@ function sendFormData(event) {
     };
 
     // Send form data to Google Apps Script Web App URL
-    fetch('YOUR_WEB_APP_URL', {
+    fetch('https://script.google.com/macros/s/AKfycbxkofHX93NE78-Ul8k2o-pXrYSSBz43XNkmpea-QmzlhLctyvtuKaA5ht83NX4JzXWUMA/exec', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
