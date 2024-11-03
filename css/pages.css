@@ -53,7 +53,7 @@
     }
 
         .specialties li::before {
-            content: '•';
+            content: '\2022'; /* Unicode for bullet */
             position: absolute;
             left: 0;
             color: #00796b;

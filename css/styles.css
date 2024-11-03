@@ -1,13 +1,13 @@
-/* Consolidated CSS file combining styles.css, pages.css, and components.css */
+/* Consolidated CSS */
 
 /* -----------------
    FONT IMPORTS
-   ----------------- */
+----------------- */
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Merriweather:wght@700&display=swap');
 
 /* -----------------
-   GLOBAL BODY STYLES
-   ----------------- */
+   GLOBAL STYLES
+----------------- */
 body {
     font-family: 'Lato', Arial, sans-serif;
     margin: 0;
@@ -18,62 +18,8 @@ body {
 }
 
 /* -----------------
-   NAVIGATION STYLES
-   ----------------- */
-nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #00796b;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 10px 15px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #004d40;
-    border-radius: 5px;
-}
-
-/* -----------------
-   FOOTER STYLES
-   ----------------- */
-footer {
-    text-align: center;
-    padding: 2em 1em;
-    background-color: #00796b;
-    color: #ffffff;
-    margin-top: 3em;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* -----------------
-   HEADING STYLES
-   ----------------- */
+   TYPOGRAPHY
+----------------- */
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
     color: #00796b;
@@ -95,22 +41,78 @@ h3 {
     margin-top: 0.5em;
 }
 
-/* -----------------
-   GENERAL LINK STYLES
-   ----------------- */
+p {
+    margin-bottom: 1.5em;
+    line-height: 1.8;
+}
+
 a {
     color: #00796b;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-a:hover {
-    color: #004d40;
-}
+    a:hover {
+        color: #004d40;
+    }
 
 /* -----------------
-   BUTTON STYLES
-   ----------------- */
+   NAVIGATION
+----------------- */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #00796b;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    nav a {
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 10px 15px;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+        nav a:hover {
+            background-color: #004d40;
+            border-radius: 5px;
+        }
+
+/* -----------------
+   FOOTER
+----------------- */
+footer {
+    text-align: center;
+    padding: 2em 1em;
+    background-color: #00796b;
+    color: #ffffff;
+    margin-top: 3em;
+}
+
+    footer a {
+        color: #ffffff;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+/* -----------------
+   BUTTONS
+----------------- */
 .button {
     background-color: #00796b;
     color: #ffffff;
@@ -124,11 +126,10 @@ a:hover {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-.button:hover {
-    background-color: #004d40;
-    transform: translateY(-2px);
-    color: #ffffff;
-}
+    .button:hover {
+        background-color: #004d40;
+        transform: translateY(-2px);
+    }
 
 .button-container {
     display: flex;
@@ -145,8 +146,8 @@ a:hover {
 }
 
 /* -----------------
-   CARD STYLES
-   ----------------- */
+   CARDS
+----------------- */
 .card {
     background-color: #ffffff;
     border-radius: 8px;
@@ -156,88 +157,14 @@ a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
 
 /* -----------------
-   HOME PAGE STYLES
-   ----------------- */
-.introduction {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.cta {
-    text-align: center;
-    margin-top: 3em;
-}
-
-/* -----------------
-   ABOUT PAGE STYLES
-   ----------------- */
-.about-section {
-    max-width: 900px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1.5em;
-}
-
-/* -----------------
-   SPECIALTIES PAGE STYLES
-   ----------------- */
-.specialties-section {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* -----------------
-   BLOG STYLES
-   ----------------- */
-.blog-container {
-    max-width: 900px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.category-tag {
-    display: inline-block;
-    background-color: #e0f7fa;
-    color: #00796b;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-/* -----------------
-   FORM STYLES
-   ----------------- */
+   FORMS
+----------------- */
 .form-group {
     margin-bottom: 1.5em;
 }
@@ -263,7 +190,7 @@ select {
 
 /* -----------------
    SUCCESS NOTIFICATION
-   ----------------- */
+----------------- */
 .success-notification {
     display: none;
     position: fixed;
@@ -279,18 +206,28 @@ select {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 /* -----------------
-   CAROUSEL STYLES
-   ----------------- */
+   CAROUSEL
+----------------- */
 .carousel {
     position: relative;
     max-width: 800px;
@@ -307,13 +244,50 @@ select {
     animation: fade 0.5s ease-in-out;
 }
 
-.carousel-item.active {
-    display: block;
+    .carousel-item.active {
+        display: block;
+    }
+
+@keyframes fade {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Navigation buttons */
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+    .carousel-prev:hover, .carousel-next:hover {
+        background-color: #555;
+    }
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
 }
 
 /* -----------------
-   RESOURCE STYLES
-   ----------------- */
+   RESOURCE CARDS
+----------------- */
 .resource-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -329,11 +303,62 @@ select {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2em;
     text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .resource-card img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 1em;
+    }
+
+    .resource-card h3 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 0.5em;
+    }
+
+/* -----------------
+   CATEGORY TAG
+----------------- */
+.category-tag {
+    display: inline-block;
+    background-color: #e0f7fa;
+    color: #00796b;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-right: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 /* -----------------
+   ENDORSEMENT CARD
+----------------- */
+.endorsement-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    font-family: 'Lato', Arial, sans-serif;
+}
+
+    .endorsement-card strong {
+        display: block;
+        font-family: 'Merriweather', serif;
+        font-size: 1.5em;
+        color: #00796b;
+        margin-bottom: 0.5em;
+    }
+
+/* -----------------
    RESPONSIVE DESIGN
-   ----------------- */
+----------------- */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -357,4 +382,183 @@ select {
     .resource-grid {
         grid-template-columns: 1fr;
     }
+
+    h1, h2, h3 {
+        text-align: center;
+    }
+}
+
+/* -----------------
+   PAGE-SPECIFIC STYLES
+----------------- */
+
+/* Home Page */
+.introduction {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta {
+    text-align: center;
+    margin-top: 3em;
+}
+
+    .cta h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+    }
+
+    .cta p {
+        margin-bottom: 1.5em;
+    }
+
+/* Specialties Page */
+.specialties-section {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.specialties {
+    column-count: 2;
+    column-gap: 1.5em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+    .specialties li {
+        margin-bottom: 0.75em;
+        padding-left: 1.5em;
+        position: relative;
+    }
+
+        .specialties li::before {
+            content: '\2022'; /* Unicode for bullet */
+            position: absolute;
+            left: 0;
+            color: #00796b;
+            font-size: 1.5em;
+        }
+
+@media (max-width: 768px) {
+    .specialties {
+        column-count: 1;
+    }
+}
+
+/* Intake Page */
+.intake-form {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Page */
+.contact-section {
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.contact-info a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Resources Page */
+.resource-grid {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Endorsements Page */
+.endorsements-hero {
+    text-align: center;
+    padding: 4em 1em;
+    background-color: #00796b;
+    color: #ffffff;
+}
+
+/* Blog Page */
+.blog-container {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post {
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+    .blog-post h3 {
+        margin-bottom: 0.5em;
+    }
+
+.categories {
+    margin-top: 0.5em;
+}
+
+.category-tag {
+    margin-right: 0.5em;
+}
+
+/* Post Pages */
+.content-container {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+    .content-container p {
+        margin-bottom: 1.5em;
+        line-height: 1.8;
+    }
+
+/* About Page */
+.about-section {
+    max-width: 900px;
+    margin: 3em auto;
+    padding: 2em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5em;
 }
