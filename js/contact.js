@@ -1,32 +1,28 @@
-function sendFormData(event) {
-    event.preventDefault(); // Prevent the default form submission
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
 
-    // Collect form data
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
+    const form = event.target;
+    const formData = new FormData(form);
 
-    // Send form data to Google Apps Script Web App URL
-    fetch('https://script.google.com/macros/s/AKfycbxkofHX93NE78-Ul8k2o-pXrYSSBz43XNkmpea-QmzlhLctyvtuKaA5ht83NX4JzXWUMA/exec', {
+    // Send form data to Formspree
+    fetch(form.action, {
         method: 'POST',
+        body: formData,
         headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
+            'Accept': 'application/json'
+        }
     })
-        .then(response => response.json())
-        .then(data => {
-            if (data.status === 'success') {
+        .then(response => {
+            if (response.ok) {
                 alert('Thank you for your message! We will get back to you shortly.');
+                form.reset(); // Clear the form after successful submission
             } else {
                 alert('Failed to send message. Please try again later.');
-                console.error('Error:', data.message);
+                console.error('Form submission error:', response.statusText);
             }
         })
         .catch(error => {
             alert('An error occurred. Please try again later.');
             console.error('Error:', error);
         });
-}
+});
