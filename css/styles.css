@@ -8,6 +8,22 @@
 /* -----------------
    GLOBAL STYLES
 ----------------- */
+main {
+    background-image: url('../images/background-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative; /* Position for the overlay */
+    padding: 3em;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #ffffff; /* Text color for better contrast */
+}
+    main * {
+        position: relative; /* Ensure text stays above the overlay */
+        z-index: 2;
+    }
+
 body {
     font-family: 'Lato', Arial, sans-serif;
     margin: 0;
@@ -24,6 +40,10 @@ h1, h2, h3 {
     font-family: 'Merriweather', serif;
     color: #00796b;
     margin-bottom: 1em;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* Soft shadow for better contrast */
+    text-align: center;
+    display: inline; /* Keeps the element's display */
+    font-weight: 700; /* Increase the weight to bold for better emphasis */
 }
 
 h1 {
@@ -149,80 +169,12 @@ footer {
    CARDS
 ----------------- */
 .card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5em;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-    }
-
-/* -----------------
-   FORMS
------------------ */
-.form-group {
-    margin-bottom: 1.5em;
-}
-
-input[type="text"],
-input[type="email"],
-textarea,
-select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 1em;
-}
-
-.checkbox-group {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 0.5em;
-}
-
-/* -----------------
-   SUCCESS NOTIFICATION
------------------ */
-.success-notification {
-    display: none;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    z-index: 1000;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 0.5s, fadeOut 0.5s 3s;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-    }
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    padding: 2em;
+    color: #333;
 }
 
 /* -----------------
@@ -290,27 +242,26 @@ select {
 ----------------- */
 .resource-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 900px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between the cards */
+    width: 100%; /* Ensures full width within its parent */
     margin: 3em auto;
     padding: 2em;
 }
 
 .resource-card {
+    display: flex; /* Flexbox for flexible layout */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: space-between; /* Distribute space evenly */
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 2em;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    height: auto; /* Allow the card to grow with its content */
+    min-height: 300px; /* Optional: set a minimum height to maintain uniformity */
 }
-
-    .resource-card img {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 1em;
-    }
 
     .resource-card h3 {
         font-family: 'Merriweather', serif;
@@ -391,16 +342,6 @@ select {
 /* -----------------
    PAGE-SPECIFIC STYLES
 ----------------- */
-
-/* Home Page */
-.introduction {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
 
 .cta {
     text-align: center;
