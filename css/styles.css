@@ -40,10 +40,14 @@ h1, h2, h3 {
     font-family: 'Merriweather', serif;
     color: #00796b;
     margin-bottom: 1em;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3); /* Soft shadow for better contrast */
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.32); /* Soft shadow for better contrast */
     text-align: center;
     display: inline; /* Keeps the element's display */
-    font-weight: 700; /* Increase the weight to bold for better emphasis */
+    font-weight: 100; /* Increase the weight to bold for better emphasis */
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77)); /* Gradient for a softer look */
+    padding: 2px; /* Padding for readability */
+    border-radius: 10px; /* Rounded corners */
+    backdrop-filter: blur(90px); /* Adjusted blur to maintain readability and blend smoothly */
 }
 
 h1 {
@@ -158,24 +162,49 @@ footer {
     margin-top: 1.5em;
 }
 
-.button-full {
-    display: block;
-    width: 100%;
-    max-width: 200px;
-    margin: 1.5em auto;
-}
-
 /* -----------------
    CARDS
 ----------------- */
 .card {
-    background-color: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px); /* Frosted glass effect */
+    background-color: rgba(240, 240, 240, 0.9); /* Light grey for soft contrast */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
     border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    padding: 2em;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 2em 3em;
     color: #333;
+    max-width: 800px; /* Ensure it matches other elements on the page */
+    margin: 2em auto; /* Center it and provide consistent top and bottom margins */
 }
+
+    .card p {
+        font-family: 'Lato', Arial, sans-serif;
+        line-height: 1.8; /* Easy readability */
+    }
+
+    .card h1 {
+        font-family: 'Merriweather', serif;
+        color: #00796b; /* Keep the green color for consistency */
+        font-size: 1.8em; /* Smaller than main h1 to reflect subordinate hierarchy */
+        font-weight: 700; /* Bold for emphasis */
+        margin-bottom: 0.5em; /* Provides spacing from the following text */
+        text-align: left; /* Align to the left for a better flow inside cards */
+    }
+
+    .card h2 {
+        font-family: 'Merriweather', serif;
+        color: #00796b; /* Match the green used in other headings */
+        margin-bottom: 1em;
+        font-size: 1.8em; /* Emphasized heading */
+    }
+
+    .card h3 {
+        font-family: 'Merriweather', serif;
+        color: #004d40; /* Slightly darker variant of the main green for contrast */
+        font-size: 1.4em; /* Smaller to differentiate from h1 and fit within the card context */
+        font-weight: 500; /* Slightly less bold than h1 for visual hierarchy */
+        margin-bottom: 0.5em; /* Spacing to maintain separation from paragraphs */
+        text-align: left; /* Align to the left for consistency within cards */
+    }
 
 /* -----------------
    CAROUSEL
@@ -339,24 +368,6 @@ footer {
     }
 }
 
-/* -----------------
-   PAGE-SPECIFIC STYLES
------------------ */
-
-.cta {
-    text-align: center;
-    margin-top: 3em;
-}
-
-    .cta h2 {
-        font-size: 2em;
-        margin-bottom: 0.5em;
-    }
-
-    .cta p {
-        margin-bottom: 1.5em;
-    }
-
 /* Specialties Page */
 .specialties-section {
     max-width: 800px;
@@ -393,16 +404,6 @@ footer {
     .specialties {
         column-count: 1;
     }
-}
-
-/* Intake Page */
-.intake-form {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Contact Page */
@@ -447,9 +448,10 @@ footer {
     max-width: 900px;
     margin: 3em auto;
     padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9); /* Adding transparency to blend with background */
+    border-radius: 12px; /* Increase rounding to match other elements */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More consistent shadow with other elements */
+    backdrop-filter: blur(8px); /* Adding a subtle blur to blend with the page background */
 }
 
 .blog-post {
@@ -462,13 +464,45 @@ footer {
         margin-bottom: 0.5em;
     }
 
-.categories {
-    margin-top: 0.5em;
-}
+    .blog-post p {
+        font-family: 'Lato', Arial, sans-serif; /* Matches the rest of the site for consistency */
+        color: #333333; /* Standard dark grey color for readability */
+        font-size: 1em; /* Normal font size to keep consistent with paragraphs elsewhere */
+        line-height: 1.8; /* Improved line height for readability */
+        margin-bottom: 1.5em; /* Consistent spacing below paragraphs */
+    }
 
-.category-tag {
-    margin-right: 0.5em;
-}
+    .blog-post .post-date {
+        font-family: 'Lato', Arial, sans-serif; /* Consistent with body text */
+        color: #00796b; /* Use site’s main green color for continuity */
+        font-size: 0.9em; /* Slightly smaller than paragraph text for secondary information */
+        margin-top: 0.5em; /* Space between heading and date */
+        margin-bottom: 1em; /* Space below date to separate it from the following content */
+        font-weight: 400; /* Regular weight to keep it subtle */
+        display: block; /* Ensure the date spans the full width underneath the header */
+        text-align: left; /* Align to the left for natural flow */
+        opacity: 0.8; /* Slight transparency to reduce emphasis */
+    }
+
+    .blog-post .blog-link {
+        font-family: 'Merriweather', serif; /* Matches other prominent typography */
+        color: #00796b; /* Site’s main green color for continuity */
+        font-size: 1em; /* Standard text size to keep it consistent with other elements */
+        font-weight: 700; /* Bold to emphasize it as an important link */
+        text-decoration: none; /* Remove default underline for a cleaner look */
+        padding: 10px 20px; /* Add padding to make it button-like */
+        border: 2px solid #00796b; /* Outline using the main color */
+        border-radius: 8px; /* Rounded corners for a modern look */
+        transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+        display: inline-block; /* Make the link look like a standalone clickable block */
+        margin-top: 1em; /* Add space from preceding elements */
+    }
+
+        .blog-post .blog-link:hover {
+            background-color: #00796b; /* Change to green on hover to make it pop */
+            color: #ffffff; /* White text to stand out against the green background */
+            transform: translateY(-2px); /* Slight lift effect to indicate interactivity */
+        }
 
 /* Post Pages */
 .content-container {
