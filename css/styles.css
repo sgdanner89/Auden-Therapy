@@ -1,219 +1,170 @@
-/* Consolidated CSS */
-
-/* -----------------
-   FONT IMPORTS
------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Merriweather:wght@700&display=swap');
-
-/* -----------------
-   GLOBAL STYLES
------------------ */
-main {
-    background-image: url('../images/background-1.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; /* Position for the overlay */
-    padding: 3em;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: #ffffff; /* Text color for better contrast */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-    main * {
-        position: relative; /* Ensure text stays above the overlay */
-        z-index: 2;
-    }
+
+:root {
+    --primary-color: #00796b;
+    --secondary-color: #004d40;
+    --text-color: #333333;
+    --background-color: #f7f9fc;
+    --card-background: #ffffff;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
 body {
     font-family: 'Lato', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f9fc;
-    color: #333333;
     line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
-/* -----------------
-   TYPOGRAPHY
------------------ */
+/* Typography */
 h1, h2, h3 {
     font-family: 'Merriweather', serif;
-    color: #00796b;
-    margin-bottom: 1em;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.32); /* Soft shadow for better contrast */
-    text-align: center;
-    display: inline; /* Keeps the element's display */
-    font-weight: 100; /* Increase the weight to bold for better emphasis */
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.77), rgba(255, 255, 255, 0.77)); /* Gradient for a softer look */
-    padding: 2px; /* Padding for readability */
-    border-radius: 10px; /* Rounded corners */
-    backdrop-filter: blur(90px); /* Adjusted blur to maintain readability and blend smoothly */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
 }
 
 h1 {
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 2.5rem;
 }
 
 h2 {
-    font-size: 2em;
-    text-align: center;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.8em;
-    margin-top: 0.5em;
+    font-size: 1.8rem;
 }
 
-p {
-    margin-bottom: 1.5em;
-    line-height: 1.8;
-}
-
-a {
-    color: #00796b;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-    a:hover {
-        color: #004d40;
-    }
-
-/* -----------------
-   NAVIGATION
------------------ */
+/* Navigation */
 nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    background-color: #00796b;
-    padding: 10px 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow);
 }
 
     nav ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
+        list-style: none;
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1rem;
     }
 
     nav a {
-        color: #ffffff;
+        color: white;
         text-decoration: none;
-        font-weight: bold;
-        padding: 10px 15px;
-        transition: background-color 0.3s, color 0.3s;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s;
     }
 
         nav a:hover {
-            background-color: #004d40;
-            border-radius: 5px;
+            background-color: var(--secondary-color);
         }
 
-/* -----------------
-   FOOTER
------------------ */
-footer {
-    text-align: center;
-    padding: 2em 1em;
-    background-color: #00796b;
-    color: #ffffff;
-    margin-top: 3em;
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
 }
 
-    footer a {
-        color: #ffffff;
-        text-decoration: none;
-    }
+.section {
+    margin: 4rem 0;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    margin-bottom: 4rem;
+}
 
-/* -----------------
-   BUTTONS
------------------ */
+/* Buttons */
 .button {
-    background-color: #00796b;
-    color: #ffffff;
-    padding: 12px 24px;
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
     border: none;
     border-radius: 25px;
-    font-size: 1em;
     cursor: pointer;
-    text-align: center;
-    display: inline-block;
+    font-size: 1rem;
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.2s;
 }
 
     .button:hover {
-        background-color: #004d40;
+        background-color: var(--secondary-color);
         transform: translateY(-2px);
+    }
+
+.button-secondary {
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+    .button-secondary:hover {
+        background-color: var(--primary-color);
+        color: white;
     }
 
 .button-container {
     display: flex;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
-    margin-top: 1.5em;
+    margin: 2rem 0;
 }
 
-/* -----------------
-   CARDS
------------------ */
+/* Cards */
 .card {
-    background-color: rgba(240, 240, 240, 0.9); /* Light grey for soft contrast */
-    backdrop-filter: blur(8px); /* Frosted glass effect */
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 2em 3em;
-    color: #333;
-    max-width: 800px; /* Ensure it matches other elements on the page */
-    margin: 2em auto; /* Center it and provide consistent top and bottom margins */
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    margin: 1rem 0;
 }
 
-    .card p {
-        font-family: 'Lato', Arial, sans-serif;
-        line-height: 1.8; /* Easy readability */
+/* Resource Grid */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.resource-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+    .resource-card:hover {
+        transform: translateY(-5px);
     }
 
-    .card h1 {
-        font-family: 'Merriweather', serif;
-        color: #00796b; /* Keep the green color for consistency */
-        font-size: 1.8em; /* Smaller than main h1 to reflect subordinate hierarchy */
-        font-weight: 700; /* Bold for emphasis */
-        margin-bottom: 0.5em; /* Provides spacing from the following text */
-        text-align: left; /* Align to the left for a better flow inside cards */
-    }
-
-    .card h2 {
-        font-family: 'Merriweather', serif;
-        color: #00796b; /* Match the green used in other headings */
-        margin-bottom: 1em;
-        font-size: 1.8em; /* Emphasized heading */
-    }
-
-    .card h3 {
-        font-family: 'Merriweather', serif;
-        color: #004d40; /* Slightly darker variant of the main green for contrast */
-        font-size: 1.4em; /* Smaller to differentiate from h1 and fit within the card context */
-        font-weight: 500; /* Slightly less bold than h1 for visual hierarchy */
-        margin-bottom: 0.5em; /* Spacing to maintain separation from paragraphs */
-        text-align: left; /* Align to the left for consistency within cards */
-    }
-
-/* -----------------
-   CAROUSEL
------------------ */
+/* Carousel */
 .carousel {
     position: relative;
     max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+    margin: 0 auto;
 }
 
 .carousel-container {
@@ -222,16 +173,100 @@ footer {
 
 .carousel-item {
     display: none;
-    animation: fade 0.5s ease-in-out;
+    padding: 2rem;
 }
 
     .carousel-item.active {
         display: block;
+        animation: fadeIn 0.5s ease-in;
     }
 
-@keyframes fade {
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 2;
+}
+
+.carousel-prev {
+    left: -20px;
+}
+
+.carousel-next {
+    right: -20px;
+}
+
+/* Testimonial Card */
+.testimonial-card {
+    background-color: var(--card-background);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+    .testimonial-card cite {
+        display: block;
+        margin-top: 1rem;
+        font-style: italic;
+        color: var(--primary-color);
+    }
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+    .footer-section a:hover {
+        opacity: 0.8;
+    }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
     from {
-        opacity: 0.4;
+        opacity: 0;
     }
 
     to {
@@ -239,301 +274,19 @@ footer {
     }
 }
 
-/* Navigation buttons */
-.carousel-prev, .carousel-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 1000;
-    transition: background-color 0.3s;
-}
-
-    .carousel-prev:hover, .carousel-next:hover {
-        background-color: #555;
-    }
-
-.carousel-prev {
-    left: 10px;
-}
-
-.carousel-next {
-    right: 10px;
-}
-
-/* -----------------
-   RESOURCE CARDS
------------------ */
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 20px; /* Space between the cards */
-    width: 100%; /* Ensures full width within its parent */
-    margin: 3em auto;
-    padding: 2em;
-}
-
-.resource-card {
-    display: flex; /* Flexbox for flexible layout */
-    flex-direction: column; /* Stack elements vertically */
-    justify-content: space-between; /* Distribute space evenly */
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    height: auto; /* Allow the card to grow with its content */
-    min-height: 300px; /* Optional: set a minimum height to maintain uniformity */
-}
-
-    .resource-card h3 {
-        font-family: 'Merriweather', serif;
-        font-size: 1.5em;
-        color: #00796b;
-        margin-bottom: 0.5em;
-    }
-
-/* -----------------
-   CATEGORY TAG
------------------ */
-.category-tag {
-    display: inline-block;
-    background-color: #e0f7fa;
-    color: #00796b;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 0.9em;
-    font-weight: bold;
-    margin-right: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-/* -----------------
-   ENDORSEMENT CARD
------------------ */
-.endorsement-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 2em;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
-    font-family: 'Lato', Arial, sans-serif;
-}
-
-    .endorsement-card strong {
-        display: block;
-        font-family: 'Merriweather', serif;
-        font-size: 1.5em;
-        color: #00796b;
-        margin-bottom: 0.5em;
-    }
-
-/* -----------------
-   RESPONSIVE DESIGN
------------------ */
+/* Media Queries */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
     }
 
-    nav a {
-        display: block;
-        padding: 10px;
+    .button-container {
+        flex-direction: column;
     }
 
-    .button {
-        width: 100%;
-        max-width: 100%;
+    .carousel-prev,
+    .carousel-next {
+        display: none;
     }
-
-    .card {
-        padding: 1em;
-    }
-
-    .resource-grid {
-        grid-template-columns: 1fr;
-    }
-
-    h1, h2, h3 {
-        text-align: center;
-    }
-}
-
-/* Specialties Page */
-.specialties-section {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.specialties {
-    column-count: 2;
-    column-gap: 1.5em;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-    .specialties li {
-        margin-bottom: 0.75em;
-        padding-left: 1.5em;
-        position: relative;
-    }
-
-        .specialties li::before {
-            content: '\2022'; /* Unicode for bullet */
-            position: absolute;
-            left: 0;
-            color: #00796b;
-            font-size: 1.5em;
-        }
-
-@media (max-width: 768px) {
-    .specialties {
-        column-count: 1;
-    }
-}
-
-/* Contact Page */
-.contact-section {
-    max-width: 800px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.contact-info p {
-    font-size: 1.1em;
-    margin-bottom: 1em;
-    text-align: center;
-}
-
-.contact-info a {
-    color: #00796b;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-/* Resources Page */
-.resource-grid {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Endorsements Page */
-.endorsements-hero {
-    text-align: center;
-    padding: 4em 1em;
-    background-color: #00796b;
-    color: #ffffff;
-}
-
-/* Blog Page */
-.blog-container {
-    max-width: 900px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: rgba(255, 255, 255, 0.9); /* Adding transparency to blend with background */
-    border-radius: 12px; /* Increase rounding to match other elements */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More consistent shadow with other elements */
-    backdrop-filter: blur(8px); /* Adding a subtle blur to blend with the page background */
-}
-
-.blog-post {
-    margin-bottom: 3em;
-    padding-bottom: 2em;
-    border-bottom: 1px solid #e0e0e0;
-}
-
-    .blog-post h3 {
-        margin-bottom: 0.5em;
-    }
-
-    .blog-post p {
-        font-family: 'Lato', Arial, sans-serif; /* Matches the rest of the site for consistency */
-        color: #333333; /* Standard dark grey color for readability */
-        font-size: 1em; /* Normal font size to keep consistent with paragraphs elsewhere */
-        line-height: 1.8; /* Improved line height for readability */
-        margin-bottom: 1.5em; /* Consistent spacing below paragraphs */
-    }
-
-    .blog-post .post-date {
-        font-family: 'Lato', Arial, sans-serif; /* Consistent with body text */
-        color: #00796b; /* Use site’s main green color for continuity */
-        font-size: 0.9em; /* Slightly smaller than paragraph text for secondary information */
-        margin-top: 0.5em; /* Space between heading and date */
-        margin-bottom: 1em; /* Space below date to separate it from the following content */
-        font-weight: 400; /* Regular weight to keep it subtle */
-        display: block; /* Ensure the date spans the full width underneath the header */
-        text-align: left; /* Align to the left for natural flow */
-        opacity: 0.8; /* Slight transparency to reduce emphasis */
-    }
-
-    .blog-post .blog-link {
-        font-family: 'Merriweather', serif; /* Matches other prominent typography */
-        color: #00796b; /* Site’s main green color for continuity */
-        font-size: 1em; /* Standard text size to keep it consistent with other elements */
-        font-weight: 700; /* Bold to emphasize it as an important link */
-        text-decoration: none; /* Remove default underline for a cleaner look */
-        padding: 10px 20px; /* Add padding to make it button-like */
-        border: 2px solid #00796b; /* Outline using the main color */
-        border-radius: 8px; /* Rounded corners for a modern look */
-        transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
-        display: inline-block; /* Make the link look like a standalone clickable block */
-        margin-top: 1em; /* Add space from preceding elements */
-    }
-
-        .blog-post .blog-link:hover {
-            background-color: #00796b; /* Change to green on hover to make it pop */
-            color: #ffffff; /* White text to stand out against the green background */
-            transform: translateY(-2px); /* Slight lift effect to indicate interactivity */
-        }
-
-/* Post Pages */
-.content-container {
-    max-width: 900px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-    .content-container p {
-        margin-bottom: 1.5em;
-        line-height: 1.8;
-    }
-
-/* About Page */
-.about-section {
-    max-width: 900px;
-    margin: 3em auto;
-    padding: 2em;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.profile-picture {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin-bottom: 1.5em;
 }
